@@ -9,12 +9,25 @@
 </head>
 
 <body>
+  <section class="menu">
+    <button id="close-menu">&times;</button>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#qualifications">qualifications</a></li>
+      <li><a href="#technologies">technologies</a></li>
+      <li><a href="#contact-me">contact</a></li>
+    </ul>
+
+  </section>
   <header>
-    <nav>
+    <nav class="default-nav">
       <a href="#about">About</a>
       <a href="#qualifications">qualifications</a>
       <a href="#technologies">technologies</a>
       <a href="#contact-me">contact</a>
+    </nav>
+    <nav class="mobile-nav">
+      <button id="menu-button">menu</button>
     </nav>
   </header>
   <main class="container">
@@ -103,6 +116,7 @@
   </section>
 
   <script src="main.js"></script>
+  <script src="menu.js"></script>
 <footer>
   Made with love by Skeptic
 </footer>

@@ -33,6 +33,20 @@ body{
     width: 30px;
 }
 
+
+    .menu > ul > li > a{
+    text-decoration: none;
+}
+
+.menu > ul > li{
+    list-style: none;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    margin-top: 48px
+}
+
+
+
 .social-links a{
     text-decoration: none;
     margin: auto 16px;
@@ -75,7 +89,7 @@ form#contact{
     display: block;
     font-weight: 600;
 }
-#contact input,textarea, button {
+#contact input, #contact textarea, #contact button {
     padding: 8px;
     font-size: 1.2rem;
     width: 100%;
@@ -96,10 +110,14 @@ header{
 }
 
 header> nav >a{
-    margin: 16px;
+    margin-right: 16px;
     text-decoration: none;
-    padding: 8px;
 }
+header> nav >a:last-child{
+    margin-right: revert;
+    
+}
+
 
 header > nav > a:hover{
    background-color: hsl(0deg 0% 50% / 48%);
@@ -118,3 +136,52 @@ footer{
     border-top: 4px solid black;
 }
 
+.mobile-nav, section.menu{
+    transition: height 0.8s ease-in-out;
+    display: none;
+}
+
+@media (width < 500px){
+    .default-nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: revert;
+    }
+    #menu-button{
+        display: block;
+        background: transparent;
+        border-radius: 8px;
+        margin-left: auto;
+    }
+    #profile-img{
+        width: 100px;
+        filter: drop-shadow(2px 4px 6px black)
+    }
+    section.menu{
+        display: revert;
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background: white;
+        width: 100%;
+    }
+    #close-menu{
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        background: transparent;
+        font-size: x-large;
+        border: none;
+
+
+    }
+    
+}
+@media (width<=810px){
+    #profile-img{
+        width: 100px;
+    }
+}
