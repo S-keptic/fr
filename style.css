@@ -2,13 +2,26 @@
     box-sizing: border-box;
 }
 
-*{
+:root{
     scroll-behavior: smooth;
+    --background-color: hsl(240deg,80%,100%);
+    --text-color : hsl(240deg,95%,8%);
+    --font-size-small:.5rem;
+    --font-size-regulerl:1rem;
+    --font-size-large:1.5rem;
+    --font-size-xl:2rem;
+    --intro-color:hsl(0,0%,85%);
+
+    --spacing-regular:1rem
 }
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: var(--font-size-large);
 }
+
 
 .container {
     padding: 16px;
@@ -17,7 +30,7 @@ body{
 .intro{
     margin: -16px;
     padding: 16px;
-    background-color: #2d2b2b;
+    background-color: var(--intro-color);
     color: white;
     text-align:center;
 }
@@ -36,6 +49,7 @@ body{
 
     .menu > ul > li > a{
     text-decoration: none;
+    color: var(--text-color);
 }
 
 .menu > ul > li{
@@ -50,6 +64,7 @@ body{
 .social-links a{
     text-decoration: none;
     margin: auto 16px;
+    color: inherit;
 }
 
 .container > section h2{
@@ -58,6 +73,8 @@ body{
 
 table{
     width: 100%;
+    background-color: var(--background-color);
+    color:var(--text-color);
 }
 table,tr,th,td{
     border: 1px solid black;
@@ -69,9 +86,7 @@ th,td{
     padding: 8px;
     
 }
-p,li{
-    font-size: 1.5rem;
-}
+
 .dynamic-text-color{
     color: royalblue;
 }
@@ -88,6 +103,7 @@ form#contact{
 #contact label{
     display: block;
     font-weight: 600;
+    font-size: var(--font-size-regulerl);
 }
 #contact input, #contact textarea, #contact button {
     padding: 8px;
@@ -104,14 +120,14 @@ header{
     padding: 16px;
     position: sticky;
     top: 0;
-    border: 2px solid white; 
-    background:hsl(0, 0%, 100%);
-    border-bottom:2px solid ;
+    background:var(--background-color);
 }
 
 header> nav >a{
     margin-right: 16px;
     text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--font-size-regulerl);
 }
 header> nav >a:last-child{
     margin-right: revert;
@@ -121,11 +137,12 @@ header> nav >a:last-child{
 
 header > nav > a:hover{
    background-color: hsl(0deg 0% 50% / 48%);
+   color: inherit;
    
     
 }
 header > nav >a:visited{
-    color: royalblue;
+    color: inherit;
 }
 
 
@@ -150,7 +167,8 @@ footer{
     }
     #menu-button{
         display: block;
-        background: transparent;
+        color: var(--text-color);
+        background-color: var(--background-color);
         border-radius: 8px;
         margin-left: auto;
     }
@@ -165,7 +183,8 @@ footer{
         position: fixed;
         top: 0;
         z-index: 1;
-        background: white;
+        background: var(--background-color);
+        color: var(--text-color);
         width: 100%;
     }
     #close-menu{
@@ -175,6 +194,7 @@ footer{
         background: transparent;
         font-size: x-large;
         border: none;
+        color: var(--text-color);
 
 
     }
@@ -185,3 +205,14 @@ footer{
         width: 100px;
     }
 }
+
+@media (prefers-color-scheme:dark){
+   body{
+    --background-color: hsl(240deg,80%,5%);
+    --text-color : hsl(240deg,95%,100%);
+    --intro-color:hsl(0,0%,18%)
+
+   }
+
+}
+
